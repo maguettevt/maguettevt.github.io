@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maguette Sembene - Ph.D. Candidate in Applied Economics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --vt-maroon: #630031;
+            --vt-orange: #CF4420;
+            --vt-gray: #75787B;
+            --light-bg: #F5F5F5;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: white;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--vt-maroon) 0%, #8B0042 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .header-text h1 {
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-text p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: var(--vt-gray);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--vt-maroon);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-family: Georgia, serif;
+            color: var(--vt-maroon);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--vt-orange);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-family: Georgia, serif;
+            color: var(--vt-maroon);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            color: var(--vt-gray);
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .bio-section {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info a {
+            color: var(--vt-maroon);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            color: var(--vt-orange);
+        }
+
+        .publication {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--vt-orange);
+        }
+
+        .publication-title {
+            font-weight: bold;
+            color: var(--vt-maroon);
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-download {
+            background-color: var(--vt-maroon);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem 0;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .cv-download:hover {
+            background-color: var(--vt-orange);
+        }
+
+        ul.research-list {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        ul.research-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .project-card h4 {
+            color: var(--vt-maroon);
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: var(--vt-gray);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--vt-orange);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .skill-item {
+            background-color: var(--light-bg);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .skill-item strong {
+            color: var(--vt-maroon);
+        }
+
+        @media (max-width: 768px) {
+            .header-text h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav a {
+                text-align: center;
+                padding: 0.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Maguette Sembene</h1>
+                <p>Ph.D. Candidate in Applied Economics</p>
+                <p>Virginia Tech</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home" class="nav-link active" onclick="showSection('home')">Home</a></li>
+            <li><a href="#research" class="nav-link" onclick="showSection('research')">Research</a></li>
+            <li><a href="#cv" class="nav-link" onclick="showSection('cv')">CV</a></li>
+            <li><a href="#teaching" class="nav-link" onclick="showSection('teaching')">Teaching</a></li>
+            <li><a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- HOME SECTION -->
+        <section id="home" class="section active">
+            <h2>Welcome</h2>
+            
+            <div class="bio-section">
+                <p>I am a Ph.D. candidate in Applied Economics at Virginia Tech's Department of Agricultural and Applied Economics, where I work under the supervision of Dr. Bradford Mills and Dr. Anubhab Gupta.</p>
+                
+                <p style="margin-top: 1rem;">My research focuses on <strong>development economics</strong>, <strong>climate change economics</strong>, and <strong>gender and labor economics</strong> in agricultural contexts. Specifically, I examine how climate variability and extreme weather events affect agricultural productivity and farmer decision-making in Sub-Saharan Africa, with a particular focus on the Senegal Groundnut Basin.</p>
+                
+                <p style="margin-top: 1rem;">My doctoral research investigates the economic impacts of extreme heat on groundnut production, land access dynamics, and youth engagement in agriculture. I employ econometric methods, remote sensing techniques, and spatial analysis to understand how environmental and economic factors shape agricultural outcomes and rural livelihoods.</p>
+                
+                <p style="margin-top: 1rem;">Before joining Virginia Tech, I earned my Agricultural Engineering Degree from École Nationale Supérieure d'Agriculture de Thiès in Senegal, where I developed a strong foundation in agricultural systems and rural development.</p>
+            </div>
+
+            <h3>Career Goals</h3>
+            <p>I aim to contribute to evidence-based policy solutions that enhance agricultural resilience and promote sustainable development in climate-vulnerable regions. My goal is to pursue a career in academic research or international development, where I can continue investigating the intersection of climate change, agriculture, and economic development.</p>
+        </section>
+
+        <!-- RESEARCH SECTION -->
+        <section id="research" class="section">
+            <h2>Research</h2>
+
+            <h3>Research Interests</h3>
+            <div class="bio-section">
+                <p>My research agenda centers on understanding the economic dimensions of climate change in agricultural systems, with particular emphasis on:</p>
+                <ul class="research-list">
+                    <li><strong>Climate Change Economics:</strong> Quantifying the economic costs of extreme weather events on agricultural productivity</li>
+                    <li><strong>Development Economics:</strong> Examining land access, resource allocation, and productivity in developing countries</li>
+                    <li><strong>Gender and Labor Economics:</strong> Analyzing gender disparities and youth engagement in agricultural production</li>
+                    <li><strong>Applied Econometrics and Remote Sensing:</strong> Using satellite data and spatial analysis to measure agricultural outcomes</li>
+                </ul>
+            </div>
+
+            <h3>Publications</h3>
+            
+            <h4>Published</h4>
+            <div class="publication">
+                <div class="publication-title">Economic costs of extreme heat on groundnut production in the Senegal Groundnut Basin</div>
+                <p><strong>Sembene, M.</strong>, Mills, B., & Gupta, A. (2025). <em>Food Policy</em>, 136, 102970.</p>
+            </div>
+
+            <h4>Working Papers</h4>
+            <div class="publication">
+                <div class="publication-title">Short-Term Changes in Land Access in the Senegal Groundnut Basin: A Productivity Analysis</div>
+                <p><strong>Sembene, M.</strong> (2025)</p>
+                <p><em>Accepted for presentation at AAEA 2025 Annual Meeting, Denver, CO</em></p>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">Land Access, Climate Variability, and Youth Exit from Farming in Senegal Groundnut Basin</div>
+                <p><strong>Sembene, M.</strong> (2025)</p>
+                <p><em>Work in progress</em></p>
+            </div>
+
+            <h4>Other Research</h4>
+            <div class="publication">
+                <div class="publication-title">Groundnut Exports from Senegal to China: Domestic Effects</div>
+                <p><strong>Sembene, M.</strong> (2025). Research paper</p>
+            </div>
+
+            <h3>Policy Briefs</h3>
+            <div class="publication">
+                <p>Mbaye, T., Mills, B., Touré, K., <strong>Sembene, M.</strong>, Diatta, P., & Diédhiou, I. (2022). "Gestion de la matière organique du sol dans le bassin arachidier du Sénégal"</p>
+            </div>
+
+            <div class="publication">
+                <p><strong>Sembène, M.</strong>, Mbaye, T., Touré, K., & Mills, B. "Utilisation des médias par les jeunes et perceptions sur le climat et pratiques agricoles"</p>
+            </div>
+
+            <h3>Conference Presentations</h3>
+            <div class="project-card">
+                <h4>2025 - Agricultural and Applied Economics Association (AAEA) Annual Meeting</h4>
+                <p><strong>Denver, CO</strong></p>
+                <p>"Short-Term Changes in Land Access in the Senegal Groundnut Basin"</p>
+            </div>
+
+            <div class="project-card">
+                <h4>2023 - Department Seminar, Virginia Tech</h4>
+                <p><strong>April 2023</strong></p>
+                <p>"Economic Costs of Extreme Heat on Groundnut Production"</p>
+            </div>
+
+            <h3>Research Projects</h3>
+            
+            <div class="project-card">
+                <h4>Graduate Research Assistant | Virginia Tech (2021 - Present)</h4>
+                <p><strong>Groundnut Production and Climate Change in Senegal</strong></p>
+                <ul class="research-list">
+                    <li>Conducting primary data collection through in-person interviews with seed producers, traders, and regulators</li>
+                    <li>Analyzing satellite data using remote sensing techniques for agricultural productivity assessments</li>
+                    <li>Applying econometric methods to analyze weather variability impacts on groundnut production</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h4>Undergraduate Research Assistant | Feed the Future Innovation Lab for Peanut (2020-2021)</h4>
+                <p><strong>Gender Disparities in Groundnut Production</strong></p>
+                <ul class="research-list">
+                    <li>Analyzed survey data using R statistical software</li>
+                    <li>Identified gender and age disparities in groundnut production revenues</li>
+                    <li>Produced 50-page undergraduate thesis on agricultural gender disparities</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CV SECTION -->
+        <section id="cv" class="section">
+            <h2>Curriculum Vitae</h2>
+            
+            <div class="contact-info">
+                <p>Download my complete CV for detailed information about my academic background, research, and experience.</p>
+                <a href="#" class="cv-download">📄 Download CV (PDF)</a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--vt-gray);">Last updated: October 2025</p>
+            </div>
+
+            <h3>Education</h3>
+            <div class="project-card">
+                <h4>Ph.D. in Applied Economics (Expected 2027)</h4>
+                <p><strong>Virginia Tech</strong>, Department of Agricultural and Applied Economics</p>
+            </div>
+
+            <div class="project-card">
+                <h4>Master of Science in Agricultural and Applied Economics (2023)</h4>
+                <p><strong>Virginia Tech</strong>, Department of Agricultural and Applied Economics</p>
+            </div>
+
+            <div class="project-card">
+                <h4>Agricultural Engineering Degree (2020)</h4>
+                <p><strong>École Nationale Supérieure d'Agriculture de Thiès</strong>, Senegal</p>
+            </div>
+
+            <h3>Honors and Awards</h3>
+            <ul class="research-list">
+                <li><strong>Outstanding Master's Thesis Award</strong>, VT Graduate School (2023)</li>
+                <li><strong>Paul J. Driscoll Fellowship</strong> (2023, 2024)</li>
+                <li><strong>Award for Innovation</strong>, University of Thiès, Senegal (2020)</li>
+                <li><strong>Winner of the Student Scientific Article Writing Competition</strong> (2018)</li>
+                <li><strong>Senegalese Government Excellence Scholarship</strong> (2016)</li>
+            </ul>
+        </section>
+
+        <!-- TEACHING SECTION -->
+        <section id="teaching" class="section">
+            <h2>Teaching</h2>
+
+            <h3>Teaching Philosophy</h3>
+            <div class="bio-section">
+                <p>My teaching philosophy centers on making economics accessible and relevant to students' lives and career goals. I believe in:</p>
+                <ul class="research-list">
+                    <li><strong>Active Learning:</strong> Encouraging students to engage with real-world data and case studies</li>
+                    <li><strong>Inclusive Education:</strong> Creating an environment where diverse perspectives enrich discussions</li>
+                    <li><strong>Applied Focus:</strong> Connecting theoretical concepts to practical applications in development and agricultural economics</li>
+                    <li><strong>Critical Thinking:</strong> Developing students' ability to analyze complex economic problems and policy questions</li>
+                </ul>
+            </div>
+
+            <h3>Teaching Experience</h3>
+            <div class="project-card">
+                <h4>Graduate Teaching Assistant | Virginia Tech (2021 - Present)</h4>
+                <ul class="research-list">
+                    <li>Mentored undergraduate students in research methods and data analysis</li>
+                    <li>Provided guidance on econometric techniques and statistical software (R, Stata)</li>
+                    <li>Assisted in developing research protocols and survey instruments</li>
+                    <li>Presented research findings at department seminars</li>
+                </ul>
+            </div>
+
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <strong>Programming & Statistical Software</strong><br>
+                    R, Python, Stata, MATLAB, Excel
+                </div>
+                <div class="skill-item">
+                    <strong>Geospatial Analysis</strong><br>
+                    QGIS, GPS technology, satellite data analysis
+                </div>
+                <div class="skill-item">
+                    <strong>Research Tools</strong><br>
+                    LaTeX, Tableau
+                </div>
+                <div class="skill-item">
+                    <strong>Languages</strong><br>
+                    French (native), English (fluent), Wolof (native)
+                </div>
+            </div>
+
+            <h3>Future Teaching Interests</h3>
+            <div class="bio-section">
+                <p>I am eager to teach courses in:</p>
+                <ul class="research-list">
+                    <li><strong>Development Economics:</strong> Covering poverty, agricultural development, and economic growth in developing countries</li>
+                    <li><strong>Environmental and Resource Economics:</strong> Focusing on climate change impacts, natural resource management, and sustainability</li>
+                    <li><strong>Econometrics and Applied Methods:</strong> Teaching quantitative methods, causal inference, and data analysis</li>
+                    <li><strong>Agricultural Economics:</strong> Examining agricultural markets, policy, and rural development</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            
+            <div class="contact-info">
+                <h3 style="margin-top: 0; color: var(--vt-maroon);">Get in Touch</h3>
+                <p><strong>Email:</strong> <a href="mailto:maguette@vt.edu">maguette@vt.edu</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/maguettesembene" target="_blank">linkedin.com/in/maguettesembene</a></p>
+                <p><strong>Department:</strong> Agricultural and Applied Economics, Virginia Tech</p>
+                <p><strong>Location:</strong> Blacksburg, Virginia, USA</p>
+            </div>
+
+            <h3>Office Address</h3>
+            <div class="bio-section">
+                <p>Department of Agricultural and Applied Economics<br>
+                Virginia Tech<br>
+                205 Hutcheson Hall<br>
+                Blacksburg, VA 24061<br>
+                United States</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Maguette Sembene | Ph.D. Candidate in Applied Economics, Virginia Tech</p>
+        <p><a href="mailto:maguette@vt.edu">maguette@vt.edu</a> | <a href="https://www.linkedin.com/in/maguettesembene" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Remove active class from all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked nav link
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Handle initial page load with hash
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                showSection(hash);
+            }
+        });
+    </script>
+</body>
+</html>
