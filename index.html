@@ -10,7 +10,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         :root {
             --vt-maroon: #630031;
             --vt-orange: #CF4420;
@@ -18,21 +17,18 @@
             --light-bg: #F5F5F5;
             --text-dark: #333333;
         }
-
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
             background-color: white;
         }
-
         header {
             background: linear-gradient(135deg, var(--vt-maroon) 0%, #8B0042 100%);
             color: white;
             padding: 2rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -43,21 +39,18 @@
             flex-wrap: wrap;
             gap: 1rem;
         }
-
         .header-text h1 {
             font-family: Georgia, serif;
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
         .header-text {
-    text-align: center;
-}
-
+            text-align: center;
+        }
         .header-text p {
             font-size: 1.2rem;
             opacity: 0.9;
         }
-
         nav {
             background-color: var(--nav-color);
             position: sticky;
@@ -65,7 +58,6 @@
             z-index: 100;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
         nav ul {
             list-style: none;
             display: flex;
@@ -74,11 +66,9 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         nav li {
             margin: 0;
         }
-
         nav a {
             display: block;
             color: white;
@@ -87,31 +77,25 @@
             transition: background-color 0.3s;
             font-weight: 500;
         }
-
         nav a:hover, nav a.active {
             background-color: var(--vt-maroon);
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
-
         .section {
             display: none;
             animation: fadeIn 0.5s;
         }
-
         .section.active {
             display: block;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         h2 {
             font-family: Georgia, serif;
             color: var(--vt-maroon);
@@ -120,7 +104,6 @@
             border-bottom: 3px solid var(--vt-orange);
             padding-bottom: 0.5rem;
         }
-
         h3 {
             font-family: Georgia, serif;
             color: var(--vt-maroon);
@@ -128,28 +111,24 @@
             margin-top: 2rem;
             margin-bottom: 1rem;
         }
-
         h4 {
             color: var(--nav-color);
             font-size: 1.2rem;
             margin-top: 1.5rem;
             margin-bottom: 0.5rem;
         }
-
         .bio-section {
             background-color: var(--light-bg);
             padding: 2rem;
             border-radius: 8px;
             margin-bottom: 2rem;
         }
-
         .bio-with-photo {
             display: flex;
             gap: 2rem;
             align-items: flex-start;
             flex-wrap: wrap;
         }
-
         .profile-photo {
             flex-shrink: 0;
             width: 200px;
@@ -159,29 +138,24 @@
             border: 4px solid var(--vt-maroon);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-
         .bio-text {
             flex: 1;
             min-width: 300px;
         }
-
         .contact-info {
             background-color: var(--light-bg);
             padding: 1.5rem;
             border-radius: 8px;
             margin-bottom: 2rem;
         }
-
         .contact-info a {
             color: var(--vt-maroon);
             text-decoration: none;
             font-weight: 500;
         }
-
         .contact-info a:hover {
             color: var(--vt-orange);
         }
-
         .publication {
             background-color: var(--light-bg);
             padding: 1.5rem;
@@ -189,13 +163,11 @@
             border-radius: 8px;
             border-left: 4px solid var(--vt-orange);
         }
-
         .publication-title {
             font-weight: bold;
             color: var(--vt-maroon);
             margin-bottom: 0.5rem;
         }
-
         .cv-download {
             background-color: var(--vt-maroon);
             color: white;
@@ -207,20 +179,16 @@
             transition: background-color 0.3s;
             font-weight: bold;
         }
-
         .cv-download:hover {
             background-color: var(--vt-orange);
         }
-
         ul.research-list {
             margin-left: 2rem;
             margin-bottom: 1rem;
         }
-
         ul.research-list li {
             margin-bottom: 0.5rem;
         }
-
         .project-card {
             background-color: white;
             border: 1px solid #ddd;
@@ -229,12 +197,10 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-
         .project-card h4 {
             color: var(--vt-maroon);
             margin-top: 0;
         }
-
         footer {
             background-color: var(--nav-color);
             color: white;
@@ -242,57 +208,46 @@
             padding: 2rem;
             margin-top: 3rem;
         }
-
         footer a {
             color: white;
             text-decoration: none;
         }
-
         footer a:hover {
             color: var(--vt-orange);
         }
-
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
             margin: 1rem 0;
         }
-
         .skill-item {
             background-color: var(--light-bg);
             padding: 1rem;
             border-radius: 5px;
         }
-
         .skill-item strong {
             color: var(--vt-maroon);
         }
-
         @media (max-width: 768px) {
             .header-text h1 {
                 font-size: 1.8rem;
             }
-
             nav ul {
                 flex-direction: column;
             }
-
             nav a {
                 text-align: center;
                 padding: 0.8rem;
             }
-
             h2 {
                 font-size: 1.5rem;
             }
-
             .bio-with-photo {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
-
             .profile-photo {
                 width: 150px;
                 height: 150px;
@@ -310,16 +265,15 @@
             </div>
         </div>
     </header>
-
     <nav>
         <ul>
             <li><a href="#home" class="nav-link active" onclick="showSection('home')">Home</a></li>
             <li><a href="#research" class="nav-link" onclick="showSection('research')">Research</a></li>
+            <li><a href="#teaching" class="nav-link" onclick="showSection('teaching')">Teaching</a></li>
             <li><a href="#cv" class="nav-link" onclick="showSection('cv')">CV</a></li>
             <li><a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a></li>
         </ul>
     </nav>
-
     <div class="container">
         <!-- HOME SECTION -->
         <section id="home" class="section active">
@@ -336,19 +290,15 @@
                         <p style="margin-top: 1rem;">My doctoral research investigates the economic impacts of extreme heat on groundnut production, land access dynamics, and youth engagement in agriculture. I employ econometric methods, remote sensing techniques, and spatial analysis to understand how environmental and economic factors shape agricultural outcomes and rural livelihoods.</p>
                         
                         <p style="margin-top: 1rem;">Before joining Virginia Tech, I earned my Agricultural Engineering Degree from École Nationale Supérieure d'Agriculture de Thiès in Senegal, where I developed a strong foundation in agricultural systems and rural development.</p>
-                         <p style="margin-top: 1rem;"> I aim to contribute to evidence-based policy solutions that enhance agricultural resilience and promote sustainable development in climate-vulnerable regions. My goal is to pursue a career in academic research or international development, where I can continue investigating the intersection of climate change, agriculture, and economic development.</p>
+                        <p style="margin-top: 1rem;"> I aim to contribute to evidence-based policy solutions that enhance agricultural resilience and promote sustainable development in climate-vulnerable regions. My goal is to pursue a career in academic research or international development, where I can continue investigating the intersection of climate change, agriculture, and economic development.</p>
                     </div>
                 </div>
             </div>
-
-            
-           
         </section>
 
         <!-- RESEARCH SECTION -->
         <section id="research" class="section">
             <h2>Research</h2>
-
             <h3>Research Interests</h3>
             <div class="bio-section">
                 <p>My research agenda centers on understanding the economic dimensions of climate change in agricultural systems, with particular emphasis on:</p>
@@ -359,7 +309,6 @@
                     <li><strong>Applied Econometrics and Remote Sensing:</strong> Using satellite data and spatial analysis to measure agricultural outcomes</li>
                 </ul>
             </div>
-
             <h3>Publications</h3>
             
             <h4>Published</h4>
@@ -367,48 +316,40 @@
                 <div class="publication-title">Economic costs of extreme heat on groundnut production in the Senegal Groundnut Basin</div>
                 <p><strong>Sembene, M.</strong>, Mills, B., & Gupta, A. (2025). <em>Food Policy</em>, 136, 102970.</p>
             </div>
-
             <h4>Working Papers</h4>
             <div class="publication">
                 <div class="publication-title">Short-Term Changes in Land Access in the Senegal Groundnut Basin: A Productivity Analysis</div>
                 <p><strong>Sembene, M.</strong> (2025)</p>
                 <p><em>Accepted for presentation at AAEA 2025 Annual Meeting, Denver, CO</em></p>
             </div>
-
             <div class="publication">
                 <div class="publication-title">Land Access, Climate Variability, and Youth Exit from Farming in Senegal Groundnut Basin</div>
                 <p><strong>Sembene, M.</strong> (2025)</p>
                 <p><em>Work in progress</em></p>
             </div>
-
             <h4>Other Research</h4>
             <div class="publication">
                 <div class="publication-title">Groundnut Exports from Senegal to China: Domestic Effects</div>
                 <p><strong>Sembene, M.</strong> (2025). Research paper</p>
             </div>
-
             <h3>Policy Briefs</h3>
             <div class="publication">
                 <p>Mbaye, T., Mills, B., Touré, K., <strong>Sembene, M.</strong>, Diatta, P., & Diédhiou, I. (2022). "Gestion de la matière organique du sol dans le bassin arachidier du Sénégal"</p>
             </div>
-
             <div class="publication">
                 <p><strong>Sembène, M.</strong>, Mbaye, T., Touré, K., & Mills, B. "Utilisation des médias par les jeunes et perceptions sur le climat et pratiques agricoles"</p>
             </div>
-
             <h3>Conference Presentations</h3>
             <div class="project-card">
                 <h4>2025 - Agricultural and Applied Economics Association (AAEA) Annual Meeting</h4>
                 <p><strong>Denver, CO</strong></p>
                 <p>"Short-Term Changes in Land Access in the Senegal Groundnut Basin"</p>
             </div>
-
             <div class="project-card">
                 <h4>2023 - Department Seminar, Virginia Tech Department of Agricultural and Applied Economics</h4>
                 <p><strong>2023</strong></p>
                 <p>"Economic Costs of Extreme Heat on Groundnut Production"</p>
             </div>
-
             <h3>Research Projects</h3>
             
             <div class="project-card">
@@ -420,7 +361,6 @@
                     <li>Applying econometric methods to analyze weather variability impacts on groundnut production</li>
                 </ul>
             </div>
-
             <div class="project-card">
                 <h4>Undergraduate Research Assistant | Feed the Future Innovation Lab for Peanut (2020-2021)</h4>
                 <p><strong>Gender Disparities in Groundnut Production</strong></p>
@@ -428,6 +368,42 @@
                     <li>Analyzed survey data using R statistical software</li>
                     <li>Identified gender and age disparities in groundnut production revenues</li>
                     <li>Produced 50-page undergraduate thesis on agricultural gender disparities</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- TEACHING SECTION -->
+        <section id="teaching" class="section">
+            <h2>Teaching</h2>
+
+            <h3>Teaching Philosophy</h3>
+            <div class="bio-section">
+                <p>My approach to teaching is grounded in clarity, engagement, and application. I believe that economics is best learned through evidence and examples that connect theory to the challenges people face in their daily lives. I aim to create a classroom environment that encourages critical thinking, collaboration, and independent reasoning.</p>
+                
+                <p style="margin-top: 1rem;">My teaching would combine lectures with discussions, applied exercises, and the use of real data to help students link economic models to empirical realities. I also value inclusivity and ensure that each student's background and perspective enrich classroom learning.</p>
+            </div>
+
+            <h3>Courses I Am Prepared to Teach</h3>
+            <div class="bio-section">
+                <p>Drawing on my training and research in agricultural and applied economics, I am prepared to teach courses such as:</p>
+                <ul class="research-list">
+                    <li>Principles of Microeconomics</li>
+                    <li>Agricultural Development</li>
+                    <li>Development Economics</li>
+                    <li>Applied Econometrics</li>
+                    <li>Economics of Climate Change</li>
+                    <li>Research Methods in Applied Economics</li>
+                </ul>
+            </div>
+
+            <h3>Teaching Preparation and Experience</h3>
+            <div class="bio-section">
+                <p>While I have not yet served as an instructor or teaching assistant, I have developed relevant preparation through my graduate training and professional experiences:</p>
+                <ul class="research-list">
+                    <li>Graduate coursework in microeconomics, econometrics, and agricultural policy at Virginia Tech</li>
+                    <li>Experience presenting research findings at academic conferences and workshops</li>
+                    <li>Mentoring peers and junior researchers on data analysis and research design</li>
+                    <li>Active participation in departmental seminars focused on pedagogy and communication</li>
                 </ul>
             </div>
         </section>
@@ -441,13 +417,6 @@
                 <a href="Sembene_CV_2025.pdf" class="cv-download">📄 Download CV (PDF)</a>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Last updated: October 2025</p>
             </div>
-
-            
-
-            
-
-            
-               
         </section>
 
         <!-- CONTACT SECTION -->
@@ -461,16 +430,12 @@
                 <p><strong>Department:</strong> Agricultural and Applied Economics, Virginia Tech</p>
                 <p><strong>Location:</strong> Blacksburg, Virginia, USA</p>
             </div>
-
-          
         </section>
     </div>
-
     <footer>
         <p>&copy; 2025 Maguette Sembene | Ph.D. Student in Applied Economics, Virginia Tech</p>
         <p><a href="mailto:maguette@vt.edu">maguette@vt.edu</a> | <a href="https://www.linkedin.com/in/maguettesembene" target="_blank">LinkedIn</a></p>
     </footer>
-
     <script>
         function showSection(sectionId) {
             // Hide all sections
@@ -490,7 +455,6 @@
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
         // Handle initial page load with hash
         window.addEventListener('DOMContentLoaded', () => {
             const hash = window.location.hash.substring(1);
