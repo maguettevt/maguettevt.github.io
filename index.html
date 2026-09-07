@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maguette Sembene - Ph.D. Student in Agricultural and Applied Economics</title>
+    <title>Maguette Sembene - Ph.D. Candidate in Agricultural and Applied Economics</title>
     <style>
         * {
             margin: 0;
@@ -24,7 +24,7 @@
             background-color: white;
         }
         header {
-            background: white
+            background: white;
             color: black;
             padding: 2rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -51,6 +51,17 @@
         .header-text p {
             font-size: 1.2rem;
             opacity: 0.9;
+        }
+        .job-market-badge {
+            display: inline-block;
+            background-color: var(--vt-maroon);
+            color: white;
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            margin-top: 0.8rem;
+            opacity: 1;
         }
         nav {
             background-color: var(--nav-color);
@@ -131,16 +142,16 @@
             flex-wrap: wrap;
         }
         .profile-photo {
-    flex-shrink: 0;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: contain;
-    object-position: center;
-    background-color: var(--light-bg);
-    border: 4px solid var(--vt-maroon);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: contain;
+            object-position: center;
+            background-color: var(--light-bg);
+            border: 4px solid var(--vt-maroon);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
         .bio-text {
             flex: 1;
             min-width: 300px;
@@ -165,6 +176,20 @@
             margin-bottom: 1.5rem;
             border-radius: 8px;
             border-left: 4px solid var(--vt-orange);
+        }
+        .publication.jmp {
+            border-left: 6px solid var(--vt-maroon);
+        }
+        .jmp-tag {
+            display: inline-block;
+            background-color: var(--vt-maroon);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            padding: 0.2rem 0.6rem;
+            border-radius: 3px;
+            margin-bottom: 0.5rem;
         }
         .publication-title {
             font-weight: bold;
@@ -263,38 +288,40 @@
         <div class="header-content">
             <div class="header-text">
                 <h1>Maguette Sembene</h1>
-                <p>Ph.D. Student in Agricultural and Applied Economics</p>
+                <p>Ph.D. Candidate in Agricultural and Applied Economics</p>
                 <p>Virginia Tech</p>
+                <p class="job-market-badge">On the job market, 2026&ndash;27</p>
             </div>
         </div>
     </header>
     <nav>
         <ul>
-            <li><a href="#home" class="nav-link active" onclick="showSection('home')">Home</a></li>
-            <li><a href="#research" class="nav-link" onclick="showSection('research')">Research</a></li>
-            <li><a href="#teaching" class="nav-link" onclick="showSection('teaching')">Teaching</a></li>
-            <li><a href="#cv" class="nav-link" onclick="showSection('cv')">CV</a></li>
-            <li><a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a></li>
+            <li><a href="#home" class="nav-link active" onclick="showSection('home', event)">Home</a></li>
+            <li><a href="#research" class="nav-link" onclick="showSection('research', event)">Research</a></li>
+            <li><a href="#teaching" class="nav-link" onclick="showSection('teaching', event)">Teaching</a></li>
+            <li><a href="#cv" class="nav-link" onclick="showSection('cv', event)">CV</a></li>
+            <li><a href="#contact" class="nav-link" onclick="showSection('contact', event)">Contact</a></li>
         </ul>
     </nav>
     <div class="container">
         <!-- HOME SECTION -->
         <section id="home" class="section active">
             <h2>Welcome</h2>
-            
+
             <div class="bio-section">
                 <div class="bio-with-photo">
                     <img src="photo.jpg" alt="Maguette Sembene" class="profile-photo">
                     <div class="bio-text">
-                <p>I am a Ph.D. student in Agricultural and Applied Economics at Virginia Tech (expected 2027), advised by Dr. Bradford Mills and Dr. Anubhab Gupta.</p>
+                        <p>I am a Ph.D. candidate in Agricultural and Applied Economics at Virginia Tech, expecting to defend in 2027, advised by Dr. Bradford Mills and Dr. Anubhab Gupta. I am on the job market in 2026&ndash;27.</p>
 
-<p style="margin-top: 1rem;">I study how climate variability and extreme weather affect agricultural productivity and farmer decisions in the Senegal Groundnut Basin. My broader interests include development economics, climate economics, gender and labor dynamics, and remote sensing applications in agriculture.</p>
+                        <p style="margin-top: 1rem;">I study how climate variability and extreme weather affect agricultural productivity and farmer decisions in Senegal's Groundnut Basin. My broader interests include development economics, climate economics, gender and labor dynamics, and remote sensing applications in agriculture.</p>
 
-<p style="margin-top: 1rem;">My dissertation examines land access dynamics, youth exit from farming, and how seed quality and information failures shape groundnut productivity in Senegal.</p>
+                        <p style="margin-top: 1rem;">My job market paper asks what pushes young people out of rainfed agriculture. My dissertation also examines who keeps control of land within the household as cultivation reduces, and how seed quality and information failures shape groundnut productivity.</p>
 
-<p style="margin-top: 1rem;">Before the Ph.D., I completed a Master's at Virginia Tech (2023) on the economic costs of extreme heat on groundnut production, work later published in <em>Food Policy</em>. I trained as an agricultural engineer at École Nationale Supérieure d'Agriculture de Thiès in Senegal (2020).</p>
+                        <p style="margin-top: 1rem;">The research draws on a three-wave household panel I helped build and now manage: 1,100 households and 4,600 GPS-measured plots across 75 villages, linked to village weather histories and satellite land-quality data.</p>
 
-<p style="margin-top: 1rem;">I want to work in academic research or international development, applying this work to climate adaptation policy in farming communities.</p>                    </div>
+                        <p style="margin-top: 1rem;">Before the Ph.D., I completed a Master's at Virginia Tech (2023) on the economic costs of extreme heat on groundnut production, work later published in <em>Food Policy</em>. I trained as an agricultural engineer at the &Eacute;cole Nationale Sup&eacute;rieure d'Agriculture de Thi&egrave;s in Senegal (2020).</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -302,79 +329,93 @@
         <!-- RESEARCH SECTION -->
         <section id="research" class="section">
             <h2>Research</h2>
-            <h3>Research Interests</h3>
+            <h3>Fields</h3>
             <div class="bio-section">
-                <p>My research agenda centers on understanding the economic dimensions of climate change in agricultural systems, with particular emphasis on:</p>
                 <ul class="research-list">
-                    <li>Climate Change Economics</li>
                     <li>Development Economics</li>
+                    <li>Climate Change Economics</li>
                     <li>Gender and Labor Economics</li>
-                    <li>Applied Econometrics and Remote Sensing</li>
+                    <li>Remote Sensing Applications in Agriculture</li>
                 </ul>
             </div>
+
             <h3>Publications</h3>
-            
+
             <h4>Published</h4>
             <div class="publication">
                 <div class="publication-title">Economic costs of extreme heat on groundnut production in the Senegal Groundnut Basin</div>
-                <p><strong>Sembene, M.</strong>, Mills, B., & Gupta, A. (2025). <em>Food Policy</em>, 136, 102970.</p>
+                <p><strong>Sembene, M.</strong>, Mills, B., &amp; Gupta, A. (2025). <em>Food Policy</em>, 136, 102970.</p>
             </div>
+
             <h4>Working Papers</h4>
-            <div class="publication">
-                <div class="publication-title">Short-Term Changes in Land Access in the Senegal Groundnut Basin: A Productivity Analysis</div>
-                <p><strong>Sembene, M.</strong> (2025)</p>
-                <p><em>Accepted for presentation at AAEA 2025 Annual Meeting, Denver, CO</em></p>
+            <div class="publication jmp">
+                <span class="jmp-tag">JOB MARKET PAPER</span>
+                <div class="publication-title">Land Access, Climate Variability, and Youth Exit from Farming in the Senegal Groundnut Basin</div>
+                <p><strong>Sembene, M.</strong>, with B. Mills and A. Gupta.</p>
             </div>
             <div class="publication">
-                <div class="publication-title">Land Access, Climate Variability, and Youth Exit from Farming in Senegal Groundnut Basin</div>
-                <p><strong>Sembene, M.</strong> (2025)</p>
-                <p><em>Work in progress</em></p>
+                <div class="publication-title">Short-Term Changes in Land Access in the Senegal Groundnut Basin</div>
+                <p><strong>Sembene, M.</strong>, with B. Mills and A. Gupta.</p>
+                <p><em>Presented at the AAEA Annual Meeting, Denver, CO (2025).</em></p>
             </div>
-            <h4>Other Research</h4>
+            <div class="publication">
+                <div class="publication-title">Seed Quality, Information Failure, and Groundnut Productivity in Senegal</div>
+                <p><strong>Sembene, M.</strong>, with B. Mills and A. Gupta.</p>
+            </div>
+
+            <h4>Work in Progress</h4>
+            <div class="publication">
+                <div class="publication-title">Did Cheap Digital Payments Reach Rural Senegal? Price, Distance, and Mobile Money Access</div>
+                <p><strong>Sembene, M.</strong></p>
+            </div>
+
+            <h4>Other Research and Policy Outputs</h4>
             <div class="publication">
                 <div class="publication-title">Groundnut Exports from Senegal to China: Domestic Effects</div>
-                <p><strong>Sembene, M.</strong> (2025). Research paper</p>
+                <p><strong>Semb&egrave;ne, M.</strong> (2025). Research paper.</p>
             </div>
-             <div class="publication">
+            <div class="publication">
                 <div class="publication-title">Senegal Groundnut Seed Sector Review</div>
-                <p><strong>Sembene, M.</strong> (2025). Sector review report</p>
-            </div>
-            <h3>Policy Briefs</h3>
-            <div class="publication">
-                <p>Mbaye, T., Mills, B., Touré, K., <strong>Sembene, M.</strong>, Diatta, P., & Diédhiou, I. (2022). "Gestion de la matière organique du sol dans le bassin arachidier du Sénégal"</p>
+                <p><strong>Sembene, M.</strong>, with B. Mills (2024). Sector review report.</p>
             </div>
             <div class="publication">
-                <p><strong>Sembène, M.</strong>, Mbaye, T., Touré, K., & Mills, B. "Utilisation des médias par les jeunes et perceptions sur le climat et pratiques agricoles"</p>
+                <p>Mbaye, T., Mills, B., Tour&eacute;, K., <strong>Sembene, M.</strong>, Diatta, P., &amp; Di&eacute;dhiou, I. (2022). &ldquo;Gestion de la mati&egrave;re organique du sol dans le bassin arachidier du S&eacute;n&eacute;gal.&rdquo; Policy brief.</p>
             </div>
+            <div class="publication">
+                <p><strong>Semb&egrave;ne, M.</strong>, Mbaye, T., Tour&eacute;, K., &amp; Mills, B. (2023). &ldquo;Utilisation des m&eacute;dias par les jeunes et perceptions du climat et des pratiques agricoles.&rdquo; Policy brief.</p>
+            </div>
+
             <h3>Conference Presentations</h3>
             <div class="project-card">
-                <h4>2025 - Agricultural and Applied Economics Association (AAEA) Annual Meeting</h4>
+                <h4>2025 &mdash; Agricultural and Applied Economics Association (AAEA) Annual Meeting</h4>
                 <p><strong>Denver, CO</strong></p>
-                <p>"Short-Term Changes in Land Access in the Senegal Groundnut Basin"</p>
+                <p>&ldquo;Short-Term Changes in Land Access in the Senegal Groundnut Basin&rdquo;</p>
             </div>
             <div class="project-card">
-                <h4>2023 - Department Seminar, Virginia Tech Department of Agricultural and Applied Economics</h4>
-                <p><strong>2023</strong></p>
-                <p>"Economic Costs of Extreme Heat on Groundnut Production"</p>
+                <h4>2023 &mdash; Department Seminar, Virginia Tech</h4>
+                <p><strong>Department of Agricultural and Applied Economics</strong></p>
+                <p>&ldquo;Economic Costs of Extreme Heat on Groundnut Production&rdquo;</p>
             </div>
-            <h3>Research Projects</h3>
-            
+
+            <h3>Research Experience</h3>
             <div class="project-card">
-                <h4>Graduate Research Assistant | Virginia Tech (2021 - Present)</h4>
-                <p><strong>Groundnut Production and Climate Change in Senegal</strong></p>
+                <h4>Graduate Research Assistant | Virginia Tech (2021 &ndash; Present)</h4>
+                <p><strong>Groundnut production and climate change in Senegal (USAID-funded)</strong></p>
                 <ul class="research-list">
-                    <li>Conducting primary data collection through in-person interviews with seed producers, traders, and regulators</li>
-                    <li>Analyzing satellite data using remote sensing techniques for agricultural productivity assessments</li>
-                    <li>Applying econometric methods to analyze weather variability impacts on groundnut production</li>
+                    <li>Built and manage a three-wave household panel: 1,100+ households, 4,600+ GPS-measured plots across 75 villages</li>
+                    <li>Harmonized survey instruments across waves and maintain reproducible cleaning pipelines in R and Stata</li>
+                    <li>Integrated satellite climate and land-quality data (CHIRPS, ERA5, iSDAsoil, Sentinel-2) with household records</li>
+                    <li>Conducted primary data collection with producers, traders, and regulators; drafted IRB protocols and consent documents</li>
+                    <li>Produced policy briefs and a sector review used by regulators and seed-industry stakeholders</li>
                 </ul>
             </div>
             <div class="project-card">
-                <h4>Undergraduate Research Assistant | Feed the Future Innovation Lab for Peanut (2020-2021)</h4>
-                <p><strong>Gender Disparities in Groundnut Production</strong></p>
+                <h4>Research Assistant | Feed the Future Innovation Lab for Peanut (2020 &ndash; 2021)</h4>
+                <p><strong>Gender disparities in groundnut production</strong></p>
                 <ul class="research-list">
-                    <li>Analyzed survey data using R statistical software</li>
-                    <li>Identified gender and age disparities in groundnut production revenues</li>
-                    <li>Produced 50-page undergraduate thesis on agricultural gender disparities</li>
+                    <li>Collected baseline household survey data across 75 villages in the Groundnut Basin</li>
+                    <li>Analyzed survey data in R to identify gender and age disparities in production revenues</li>
+                    <li>Produced a 50-page thesis on agricultural gender disparities with policy implications</li>
                 </ul>
             </div>
         </section>
@@ -385,29 +426,28 @@
 
             <h3>Teaching Philosophy</h3>
             <div class="bio-section">
-                <p>I teach economics through real data and applied problems, not models alone. In class, I mix short lectures with discussion and hands-on work with evidence, so students can test what theory predicts against what the data shows.</p>
+                <p>I teach economics through real data and applied problems. In class, I mix short lectures with discussion and hands-on work with evidence, so students can test what theory predicts against what the data shows.</p>
 
-<p style="margin-top: 1rem;">My goal is for students to leave reasoning independently about economic questions. A room with varied backgrounds tends to surface better questions, and I structure discussion to use that.</p>          </div>
+                <p style="margin-top: 1rem;">My goal is for students to leave reasoning independently about economic questions. A room with varied backgrounds tends to surface better questions, and I structure discussion to use that.</p>
+            </div>
 
             <h3>Teaching Experience</h3>
             <div class="bio-section">
                 <p><strong>Teaching Assistant | Virginia Tech (Spring 2026)</strong></p>
                 <ul class="research-list">
-                    <li>Applied Economic Forecasting</li>
-                    <li>Fundamentals of Econometrics</li>
+                    <li>Fundamentals of Econometrics (AAEC/STAT 4804, AAEC 5804G)</li>
+                    <li>Applied Economic Forecasting (AAEC 4484, AAEC/STAT 5484)</li>
                 </ul>
             </div>
-
-   
         </section>
 
         <!-- CV SECTION -->
         <section id="cv" class="section">
             <h2>Curriculum Vitae</h2>
-            
+
             <div class="contact-info">
                 <p>Download my complete CV for detailed information about my academic background, research, and experience.</p>
-                <a href="Sembene_CV_2026.pdf" class="cv-download">📄 Download CV (PDF)</a>
+                <a href="Sembene_CV_2026.pdf" class="cv-download">Download CV (PDF)</a>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Last updated: September 2026</p>
             </div>
         </section>
@@ -415,43 +455,46 @@
         <!-- CONTACT SECTION -->
         <section id="contact" class="section">
             <h2>Contact</h2>
-            
+
             <div class="contact-info">
-                <p><strong>Email:</strong> <a href="">maguette at vt dot edu</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/maguettesembene" target="_blank">linkedin.com/in/maguettesembene</a></p>
+                <p><strong>Email:</strong> <a href="mailto:maguette@vt.edu">maguette@vt.edu</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/maguettesembene" target="_blank" rel="noopener">linkedin.com/in/maguettesembene</a></p>
                 <p><strong>Department:</strong> Agricultural and Applied Economics, Virginia Tech</p>
                 <p><strong>Location:</strong> Blacksburg, Virginia, USA</p>
             </div>
         </section>
     </div>
     <footer>
-        <p>&copy; 2025 Maguette Sembene | Ph.D. Student in Agricultural and Applied Economics, Virginia Tech</p>
-        <p><a href="">maguetteat vt dot edu</a> | <a href="https://www.linkedin.com/in/maguettesembene" target="_blank">LinkedIn</a></p>
+        <p>&copy; 2026 Maguette Sembene | Ph.D. Candidate in Agricultural and Applied Economics, Virginia Tech</p>
+        <p><a href="mailto:maguette@vt.edu">maguette@vt.edu</a> | <a href="https://www.linkedin.com/in/maguettesembene" target="_blank" rel="noopener">LinkedIn</a></p>
     </footer>
     <script>
-        function showSection(sectionId) {
-            // Hide all sections
+        function showSection(sectionId, evt) {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => section.classList.remove('active'));
-            
-            // Remove active class from all nav links
+
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => link.classList.remove('active'));
-            
-            // Show selected section
-            document.getElementById(sectionId).classList.add('active');
-            
-            // Add active class to clicked nav link
-            event.target.classList.add('active');
-            
-            // Scroll to top
+
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+            }
+
+            if (evt && evt.target) {
+                evt.target.classList.add('active');
+            } else {
+                const link = document.querySelector('.nav-link[href="#' + sectionId + '"]');
+                if (link) link.classList.add('active');
+            }
+
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-        // Handle initial page load with hash
+
         window.addEventListener('DOMContentLoaded', () => {
             const hash = window.location.hash.substring(1);
-            if (hash) {
-                showSection(hash);
+            if (hash && document.getElementById(hash)) {
+                showSection(hash, null);
             }
         });
     </script>
