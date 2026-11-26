@@ -196,6 +196,19 @@
             color: var(--vt-maroon);
             margin-bottom: 0.5rem;
         }
+        .publication-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .publication-title a:hover,
+        .paper-link:hover {
+            color: var(--vt-orange);
+        }
+        .paper-link {
+            color: var(--vt-maroon);
+            font-weight: bold;
+            text-decoration: none;
+        }
         .cv-download {
             background-color: var(--vt-maroon);
             color: white;
@@ -307,23 +320,21 @@
         <section id="home" class="section active">
             <h2>Welcome</h2>
 
-            
-<div class="bio-section">
-    <div class="bio-with-photo">
-        <img src="photo.jpg" alt="Maguette Sembene" class="profile-photo">
-        <div class="bio-text">
-            <p>I am a PhD candidate in Agricultural and Applied Economics at Virginia Tech, advised by Dr. Bradford Mills and Dr. Anubhab Gupta. I expect to defend my dissertation in spring 2027 and am on the job market for 2026&ndash;27.</p>
+            <div class="bio-section">
+                <div class="bio-with-photo">
+                    <img src="photo.jpg" alt="Maguette Sembene" class="profile-photo">
+                    <div class="bio-text">
+                        <p>I am a PhD candidate in Agricultural and Applied Economics at Virginia Tech, advised by Dr. Bradford Mills and Dr. Anubhab Gupta. I expect to defend my dissertation in spring 2027 and am on the job market for 2026&ndash;27.</p>
 
-            <p style="margin-top: 1rem;">My field is development economics and I study the effects of climate change and extreme weather events on agricultural productivity and farmer behavior in Senegal&rsquo;s Groundnut Basin. My other interests include gender and labor issues and remote sensing applications in agriculture.</p>
+                        <p style="margin-top: 1rem;">My field is development economics and I study the effects of climate change and extreme weather events on agricultural productivity and farmer behavior in Senegal&rsquo;s Groundnut Basin. My other interests include gender and labor issues and remote sensing applications in agriculture.</p>
 
-            <p style="margin-top: 1rem;">My job market paper examines how heat stress drives young people out of rainfed agriculture. My dissertation also examines who maintains control over land as cultivation declines, and how seed quality and information failures affect groundnut productivity.</p>
+                        <p style="margin-top: 1rem;">My job market paper examines how heat stress drives young people out of rainfed agriculture. My dissertation also examines who maintains control over land as cultivation declines, and how seed quality and information failures affect groundnut productivity.</p>
 
-            <p style="margin-top: 1rem;">Before my PhD, I earned a Master&rsquo;s degree from Virginia Tech in 2023, with a thesis on the economic impacts of extreme heat on groundnut production, later published in <em>Food Policy</em> (2025). I graduated from the &Eacute;cole Nationale Sup&eacute;rieure d&rsquo;Agriculture de Thi&egrave;s in Senegal with a degree in Agricultural Engineering in 2020.</p>
-        </div>
-    </div>
-</div>
-</section>
-
+                        <p style="margin-top: 1rem;">Before my PhD, I earned a Master&rsquo;s degree from Virginia Tech in 2023, with a thesis on the economic impacts of extreme heat on groundnut production, later published in <em>Food Policy</em> (2025). I graduated from the &Eacute;cole Nationale Sup&eacute;rieure d&rsquo;Agriculture de Thi&egrave;s in Senegal with a degree in Agricultural Engineering in 2020.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- RESEARCH SECTION -->
         <section id="research" class="section">
@@ -349,8 +360,9 @@
             <h4>Working Papers</h4>
             <div class="publication jmp">
                 <span class="jmp-tag">JOB MARKET PAPER</span>
-                <div class="publication-title">Land Access, Climate Variability, and Youth Exit from Farming in the Senegal Groundnut Basin</div>
+                <div class="publication-title"><a href="Sembene_JMP.pdf" target="_blank" rel="noopener">Heat Stress and the Future of Young Farmers in Senegal</a></div>
                 <p><strong>Sembene, M.</strong>, with B. Mills and A. Gupta.</p>
+                <p><a href="Sembene_JMP.pdf" target="_blank" rel="noopener" class="paper-link">Latest version (PDF)</a></p>
             </div>
             <div class="publication">
                 <div class="publication-title">Short-Term Changes in Land Access in the Senegal Groundnut Basin</div>
@@ -419,7 +431,6 @@
             </div>
         </section>
 
-        
         <!-- CV SECTION -->
         <section id="cv" class="section">
             <h2>Curriculum Vitae</h2>
